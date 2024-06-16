@@ -1,19 +1,24 @@
 import './App.css';
 import styled from 'styled-components';
+import {Header} from "./layout/header/Header";
+import {Main} from "./layout/sections/Main";
+import {About} from "./layout/about/About";
+import {Stack} from "./layout/stack/Stack";
+import {Project} from "./layout/project/Project";
+import {Footer} from "./layout/footer/Footer";
 
 
 function App() {
     return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-        </div>
+        <>
+            <Header />
+            <Main />
+            <About />
+            <Stack />
+            <Project />
+            <Footer />
+        </>
     );
 }
 
 export default App;
-
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
