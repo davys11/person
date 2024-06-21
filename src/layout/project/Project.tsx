@@ -14,9 +14,11 @@ export const Project = () => {
                 <Projects>
                     <ProjectItem name='sabtrans'
                                  description={'ERP/CRM system for special equipment rental companies'}
+                                stack={['PHP', 'React', 'Storage', 'DevOps']}/><ProjectItem name='sabtrans'
+                                 description={'ERP/CRM system for special equipment rental companies'}
+                                stack={['PHP', 'React', 'Storage', 'DevOps']}/><ProjectItem name='sabtrans'
+                                 description={'ERP/CRM system for special equipment rental companies'}
                                 stack={['PHP', 'React', 'Storage', 'DevOps']}/>
-                    <ProjectItem name='sabtrans'/>
-                    <ProjectItem name='sabtrans'/>
                 </Projects>
             </Container>
         </ProjectBlock>
@@ -30,5 +32,4 @@ const Projects = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 15px;
 `

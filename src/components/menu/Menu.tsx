@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type MenuTypeProps = {
     menuItem: Array<string>
@@ -26,5 +27,9 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 60px;
         list-style: none;
+    }
+    
+    @media ${theme.media.tablet} {
+        display: none;
     }
 `

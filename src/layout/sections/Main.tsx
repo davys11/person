@@ -24,25 +24,6 @@ export const Main = () => {
 
 const StyleMainContainer = styled.section`
     `
-const FlexContainer = styled.section`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 220px;
-    margin-bottom: 200px;
-    font-weight: bold;
-    color: ${theme.colors.title};
-    
-    & * {
-        font-size: ${theme.size.mainBlock};
-    }
-    
-    h2 {
-        background: -webkit-linear-gradient(0deg, #13B0F5 -2.06%, #E70FAA 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-`;
 
 const Photo = styled.img`
     width: 350px;
@@ -54,3 +35,38 @@ const Photo = styled.img`
     -webkit-mask-composite: xor; /*5'*/
     mask-composite: exclude; /*5*/
 `
+
+const FlexContainer = styled.section`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 220px;
+    margin-bottom: 200px;
+    font-weight: bold;
+    color: ${theme.colors.title};
+
+    & * {
+        font-size: ${theme.size.mainBlock};
+    }
+
+    h2 {
+        background: -webkit-linear-gradient(0deg, ${theme.colors.startGrad} -2.06%, ${theme.colors.endGrad} 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media ${theme.media.center} {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    @media ${theme.media.headerSmall} {
+        ${Photo} {
+            width: 250px;
+            height: 250px;
+        }
+    }
+`;

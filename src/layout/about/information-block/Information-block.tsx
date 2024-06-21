@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
+import {theme} from "../../../styles/Theme";
 
 type InformationBlockPropsType = {
     title: string,
@@ -71,11 +72,6 @@ const InfoBlock = styled.div`
 
 `
 
-const SubBlock = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
-
 const ButtonTypeTime = styled.div<CssInformationBlockPropsType>`
     display: inline-block;
     padding: 8px 20px;
@@ -85,4 +81,21 @@ const ButtonTypeTime = styled.div<CssInformationBlockPropsType>`
     font-weight: 600;
     background: ${props => props.colorBlockTime || 'rgba(215, 255, 224, 1)'}
 
+`
+
+const SubBlock = styled.div`
+    display: flex;
+    justify-content: space-between;
+    @media ${theme.media.mobile} {
+        flex-wrap: wrap;
+        gap: 5px;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        ${ButtonTypeTime} {
+            width: 100px;
+            margin: 0 auto;
+        }
+    }
 `

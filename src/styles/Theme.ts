@@ -11,5 +11,11 @@ export const theme = {
         mainBlock: '48px',
         title: '48px',
         subTitle: '42px',
-    }
+    },
+    media: {
+        headerSmall: "screen and (max-width: 372px)",
+        center: "screen and (max-width: 876px)",
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+    },
 }

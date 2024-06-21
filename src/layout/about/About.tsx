@@ -56,10 +56,6 @@ const AboutTitle = styled.h3`
     margin: 38px 0;
 `
 
-const SectionAbout = styled.section`
-    position: relative;
-`
-
 const FlexContainer = styled.div`
 `
 
@@ -70,5 +66,21 @@ const AboutContainer = styled.div`
 const Photo = styled.img`
     position: absolute;
     right: 0;
-    top: -150px
+    top: -150px;
+    z-index: -1;
+`
+
+const SectionAbout = styled.section`
+    position: relative;
+    @media ${theme.media.center} {
+        text-align: center;
+        
+        ${Photo} {
+            display: none;
+        }
+        
+        ${AboutContainer} {
+            max-width: 100%;
+        }
+    }
 `

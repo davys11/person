@@ -23,7 +23,8 @@ export const Footer = () => {
     );
 };
 
-const FooterBlock = styled.div``
+const FooterBlock = styled.div`
+`
 
 const FooterStyled = styled.div`
     display: flex;
@@ -31,7 +32,11 @@ const FooterStyled = styled.div`
     align-items: center;
     margin-top: 150px;
     padding: 45px 15px;
-    border-top: 1px solid ${theme.colors.font};    
+    border-top: 1px solid ${theme.colors.font};
+    @media ${theme.media.tablet} {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 const IconHeader = styled.header`
